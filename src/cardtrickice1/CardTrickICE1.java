@@ -51,7 +51,27 @@ System.out.println("Please choose any card");
     key.setValue(value);
     key.getSuits();*/
         }
-    
+    Card luckyCard= new Card();
+    key.setValue(8);
+    key.setSuits("Hearts");
+    boolean found=false;
+    System.out.println("user is searching for: "+key);
+    for(int i=0;i<magicHand.length;i++)
+    {
+        if((magicHand[i].getValue()==key.getValue())&& magicHand[i].getSuits().equalsIgnoreCase(key.getSuits()))
+        {
+            System.out.println("magic card found "+(i+1));
+            found=true;
+            break;
+        }
+    }
+    if(!found){
+        System.out.println("not found");
+                  
+
+        }
+    }
+
     
     
     }}
